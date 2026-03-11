@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chester & Co | Modern Menswear</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Lato:wght@300;400;500&display=swap" rel="stylesheet">
+
+<style>
+body {
+  margin: 0;
+  font-family: Lato, sans-serif;
+  background-color: #fafafa;
+  color: #1a1a1a;
+}
+
+/* Header */
+header {
+  background: #ffffff;
+  border-bottom: 1px solid #e5e5e5;
+  padding: 20px 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+h1 {
+  font-family: 'Playfair Display', serif;
+  margin: 0;
+  font-size: 28px;
+  letter-spacing: 1px;
+}
+
+/* Navigation + Dropdown */
+nav {
+  display: flex;
+  gap: 30px;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+
+nav ul li {
+  position: relative;
+}
+
+nav a {
+  text-decoration: none;
+  color: #1a1a1a;
+  font-size: 15px;
+  opacity: 0.9;
+}
+
+nav a:hover {
+  opacity: 1;
+}
+
+.dropdown > a::after {
+  content: " ▼";
+  font-size: 12px;
+  opacity: 0.6;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  background: #ffffff;
+  border: 1px solid #ddd;
+  padding: 10px 0;
+  top: 25px;
+  min-width: 150px;
+}
+
+.dropdown-menu a {
+  display: block;
+  padding: 10px 15px;
+  color: #1a1a1a;
+}
+
+.dropdown-menu a:hover {
+  background: #f2f2f2;
+}
+
+/* Show dropdown on hover */
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+/* Hero */
+.hero {
+  height: 82vh;
+  background: url('https://images.unsplash.com/photo-1520962802278-cf3756753ed1?auto=format&fit=crop&w=1600&q=90')
+              center/cover no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+.hero h2 {
+  font-size: 3rem;
+  font-family: 'Playfair Display', serif;
+  margin-bottom: 15px;
+}
+
+.hero button {
+  padding: 12px 30px;
+  border: none;
+  background: rgba(26, 26, 26, 0.85);
+  color: #fff;
+  letter-spacing: 1px;
+  cursor: pointer;
+}
+
+/* Collection Grid */
+section {
+  padding: 70px 60px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 40px;
+}
+
+.item {
+  background: #fff;
+  border: 1px solid #eee;
+  padding: 20px;
+}
+
+.item img {
+  width: 100%;
+  height: 330px;
+  object-fit: cover;
+}
+
+.item h4 {
+  font-family: 'Playfair Display', serif;
+  margin-top: 12px;
+  font-size: 1.2rem;
+}
+
+/* Footer */
+.footer {
+  margin-top: 80px;
+  background: #111;
+  color: #ccc;
+  text-align: center;
+  padding: 40px;
+  font-size: 14px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <h1>Chester & Co</h1>
+
+  <nav>
+    <ul class="dropdown">
+      <li>
+        <a href="#">Collection</a>
+        <ul class="dropdown-menu">
+          <li><a href="#">Suits</a></li>
+          <li><a href="#">Shirts</a></li>
+          <li><a href="#">Outerwear</a></li>
+          <li><a href="#">Accessories</a></li>
+        </ul>
+      </li>
+    </ul>
+
+    <ul class="dropdown">
+      <li>
+        <a href="#">About</a>
+        <ul class="dropdown-menu">
+          <li><a href="#">Our Story</a></li>
+          <li><a href="#">Craftsmanship</a></li>
+          <li><a href="#">Sustainability</a></li>
+        </ul>
+      </li>
+    </ul>
+
+    <ul class="dropdown">
+      <li>
+        <a href="#">Support</a>
+        <ul class="dropdown-menu">
+          <li><a href="#">Contact</a></li>
+          <li><a href="#">Size Guide</a></li>
+          <li><a href="#">Shipping</a></li>
+          <li><a href="#">Returns</a></li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
+</header>
+
+<div class="hero">
+  <div>
+    <h2>Refined Menswear, Crafted to Last</h2>
+    <button>Explore Collection</button>
+  </div>
+</div>
+
+<section>
+  <div class="grid">
+
+    <div class="item">
+      <img src="https://images.unsplash.com/photo-1520975918318-3e7c7736e46e?auto=format&fit=crop&w=700&q=90">
+      <h4>Suits</h4>
+      <p>Tailored precision and modern structure.</p>
+    </div>
+
+    <div class="item">
+      <img src="https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?auto=format&fit=crop&w=700&q=90">
+      <h4>Shirts</h4>
+      <p>Premium cotton, clean lines, minimal design.</p>
+    </div>
+
+    <div class="item">
+      <img src="https://images.unsplash.com/photo-1600185365836-a568d43c036d?auto=format&fit=crop&w=700&q=90">
+      <h4>Outerwear</h4>
+      <p>Quiet luxury built for layered refinement.</p>
+    </div>
+
+    <div class="item">
+      <img src="https://images.unsplash.com/photo-1603349206295-a74f3e15f37a?auto=format&fit=crop&w=700&q=90">
+      <h4>Accessories</h4>
+      <p>Understated essentials that complete the look.</p>
+    </div>
+
+  </div>
+</section>
+
+<div class="footer">
+  © 2026 Chester & Co. All Rights Reserved.
+</div>
+
+</body>
+</html>
